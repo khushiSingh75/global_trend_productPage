@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Trend - Product Page</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <span class="logo">Global Trend</span>
+            <button class="cart-floating-button" id="openCart">🛒 <span id="cart-count">0</span></button>
+        </div>
+    </header>
+
+    <main class="product-page">
+        <div class="product-gallery">
+            <div class="thumbnail-nav">
+                <img src="/assests/img1.png" data-color="teal" alt="Product thumbnail 1" class="thumbnail active">
+                <img src="/assests/img2.png" data-color="navy" alt="Product thumbnail 2" class="thumbnail">
+                <img src="/assests/img3.png" data-color="beige" alt="Product thumbnail 3" class="thumbnail">
+                <img src="/assests/img4.png" data-color="rust" alt="Product thumbnail 4" class="thumbnail">
+                <img src="/assests/img5.png" data-color="dark-pink" alt="Product thumbnail 5" class="thumbnail">
+                <img src="/assests/img7.png" data-color="teal" alt="Product thumbnail 6" class="thumbnail">
+            </div>
+            <div class="main-image" id="mainImageContainer">
+                <img id="mainProductImage" src="/assests/img1.png" alt="Main product image">
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h1 class="product-title">Global Trend Sweater</h1>
+            <p class="product-brand">Global Trend</p>
+            <p class="product-price">$79.00 <span class="new-tag">New</span></p>
+            <p class="shipping-info">In stock • Free returns • Ships from Mumbai, India</p>
+
+            <div class="product-option color-select">
+                <label for="color">Colour</label>
+                <div class="color-swatches">
+                    <button class="color-swatch teal active" data-color="teal" data-img="/assests/img1.png"></button>
+                    <button class="color-swatch navy" data-color="navy" data-img="/assests/img2.png"></button>
+                    <button class="color-swatch beige" data-color="beige" data-img="/assests/img3.png"></button>
+                    <button class="color-swatch rust" data-color="rust" data-img="/assests/img4.png"></button>
+                    <button class="color-swatch dark-pink" data-color="dark-pink" data-img="/assests/img5.png"></button>
+                </div>
+            </div>
+
+            <div class="product-option size-select">
+                <label for="size">Size</label>
+                <div class="size-buttons">
+                    <button class="size-button" data-size="S">S</button>
+                    <button class="size-button" data-size="M">M</button>
+                    <button class="size-button" data-size="L">L</button>
+                </div>
+                <button class="size-chart-button" id="openSizeChart">Size Chart</button>
+            </div>
+            
+            <button class="compare-colours-button" id="openCompareModal">Compare Colours</button>
+            
+
+            <p class="selected-options">Selected: Colour: Teal • Size: -</p>
+
+            <div class="action-buttons">
+                <button class="add-to-cart">Add to cart</button>
+                <button class="buy-now">Buy now</button>
+            </div>
+        </div>
+    </main>
+
+    <section class="product-info-tabs">
+        <div class="tabs-header">
+            <button class="tab-button active" data-tab="description">Description</button>
+            <button class="tab-button" data-tab="info">Product Information</button>
+            <button class="tab-button" data-tab="shipping">Shipping Details</button>
+        </div>
+        <div class="tabs-content">
+            <div id="description" class="tab-pane active">
+                <p>The Global Trend Sweater is crafted from a luxurious blend of merino wool and recycled polyester, offering superior warmth without the bulk. Its timeless design features a subtle rib-knit pattern and a relaxed fit, making it the perfect staple for any cool-weather wardrobe. Ethically sourced and made in India.</p>
+            </div>
+            <div id="info" class="tab-pane">
+                <ul>
+                    <li>Material: 70% Merino Wool, 30% Recycled Polyester</li>
+                    <li>Care: Hand wash or dry clean recommended</li>
+                    <li>Fit: Relaxed/Comfort Fit</li>
+                    <li>Weight: Mid-weight (approx 450g)</li>
+                </ul>
+            </div>
+            <div id="shipping" class="tab-pane">
+                <p>Standard Shipping (3-5 business days) is <b>Free</b> for this item. Express Shipping (1-2 business days) is available for $15. All orders ship from Mumbai, India, with full tracking provided. Free returns within 30 days.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pairs-well-with">
+        <h2>Pairs well with</h2>
+        <div class="related-items">
+            <div class="item">
+                <img src="/assests/jacket1.png" alt="Jacket">
+                <p class="item-name"> Jacket</p>
+                <p class="item-price">$59.00</p>
+            </div>
+            <div class="item">
+                <img src="/assests/scarf3.png" alt="Tex Scarf">
+                <p class="item-name">Tex Scarf</p>
+                <p class="item-price">$19.00</p>
+            </div>
+            <div class="item">
+                <img src="/assests/black_boot.png" alt="boot">
+                <p class="item-name">Leather Boot</p>
+                <p class="item-price">$29.00</p>
+            </div>
+            <div class="item">
+                <img src="/assests/bag2.png" alt="bag">
+                <p class="item-name">Fancy Bag</p>
+                <p class="item-price">$39.00</p>
+            </div>
+            <div class="item">
+                <img src="/assests/trousers.png" alt="Black Trousers">
+                <p class="item-name">Black Trousers</p>
+                <p class="item-price">$89.00</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="buy-these-together">
+        <h2>Buy these together</h2>
+        <div class="bundle-offer">
+            <div class="bundle-item">
+                <input type="checkbox" id="bundle-knit" class="bundle-checkbox" data-price="79.00" checked>
+                <label for="bundle-knit">
+                    <img src="/assests/img6.png" alt="Trendy Sweater">
+                    <p class="bundle-item-name">Trendy Sweater ($79.00)</p>
+                </label>
+            </div>
+            <span class="plus-sign">+</span>
+            <div class="bundle-item">
+                <input type="checkbox" id="bundle-scarf" class="bundle-checkbox" data-price="19.00" checked>
+                <label for="bundle-scarf">
+                    <img src="/assests/scarf.png" alt="Tex Scarf">
+                    <p class="bundle-item-name">Tex Scarf ($19.00)</p>
+                </label>
+            </div>
+            <span class="plus-sign">+</span>
+            <div class="bundle-summary">
+                <p class="bundle-total">Total: <span id="bundle-total-price">$98.00</span></p>
+                <button class="add-bundle-to-cart">Add bundle to cart</button>
+            </div>
+        </div>
+
+        <div class="bundle-offer">
+            <div class="bundle-item">
+                <input type="checkbox" id="bundle-knit" class="bundle-checkbox" data-price="79.00" checked>
+                <label for="bundle-knit">
+                    <img src="/assests/scarf2.png" alt="scarf">
+                    <p class="bundle-item-name">Thermal Close Scarf ($80.00)</p>
+                </label>
+            </div>
+            <span class="plus-sign">+</span>
+            <div class="bundle-item">
+                <input type="checkbox" id="bundle-scarf" class="bundle-checkbox" data-price="19.00" checked>
+                <label for="bundle-scarf">
+                    <img src="/assests/boot1.png" alt="boot">
+                    <p class="bundle-item-name">Cozy Boot ($30.00)</p>
+                </label>
+            </div>
+            <span class="plus-sign">+</span>
+            <div class="bundle-summary">
+                <p class="bundle-total">Total: <span id="bundle-total-price">$98.00</span></p>
+                <button class="add-bundle-to-cart">Add bundle to cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="related-products">
+        <h2>You might also like</h2>
+        <div class="related-grid">
+            <div class="product-card">
+                <img src="/assests/tee.png" alt="Related Product 1">
+                <span class="product-badge">Popular</span>
+                <p class="product-name">Slim-Fit Shirt</p>
+                <p class="product-price">$45.00</p>
+            </div>
+            <div class="product-card">
+                <img src="/assests/bag.png" alt="Related Product 2">
+                <p class="product-name">Leather Tote Bag</p>
+                <p class="product-price">$120.00</p>
+            </div>
+            <div class="product-card">
+                <img src="/assests/trousers.png" alt="Related Product 3">
+                <span class="product-badge new-badge">New</span>
+                <p class="product-name">Wool Trousers</p>
+                <p class="product-price">$85.00</p>
+            </div>
+            <div class="product-card">
+                <img src="/assests/beanie.png" alt="Related Product 4">
+                <p class="product-name">Cotton Beanie</p>
+                <p class="product-price">$22.00</p>
+            </div>
+        </div>
+
+        <div class="related-grid">
+            <div class="product-card">
+                <img src="/assests/cap.png" alt="Related Product 1">
+                <span class="product-badge">Popular</span>
+                <p class="product-name">Black Cap</p>
+                <p class="product-price">$45.00</p>
+            </div>
+            <div class="product-card">
+                <img src="/assests/ring.png" alt="Related Product 2">
+                <span class="product-badge new-badge">New</span>
+                <p class="product-name"> Gold Ring</p>
+                <p class="product-price">$120.00</p>
+            </div>
+            <div class="product-card">
+                <img src="/assests/scarf.png" alt="Related Product 3">
+                <span class="product-badge new-badge">New</span>
+                <p class="product-name">Woolen Scarf</p>
+                <p class="product-price">$85.00</p>
+            </div>
+            <div class="product-card">
+                <img src="/assests/denim.png" alt="Related Product 4">
+                <p class="product-name">Denim Jacket</p>
+                <p class="product-price">$22.00</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal hidden" id="sizeChartModal">
+        <div class="modal-content">
+            <span class="close-modal" data-modal-target="sizeChartModal">&times;</span>
+            <h3>Size Chart (Global Trend Sweater)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Size</th>
+                        <th>Chest (in)</th>
+                        <th>Length (in)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>S</td>
+                        <td>34 - 36</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>38 - 40</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>42 - 44</td>
+                        <td>28</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="modal-note">Measurements are for the body, not the garment.</p>
+        </div>
+    </div>
+    
+    <div class="modal hidden" id="compareModal">
+        <div class="modal-content large-modal">
+            <span class="close-modal" data-modal-target="compareModal">&times;</span>
+            <h3>Compare fancy Sweater Colours</h3>
+            <div class="compare-swatch-list">
+                 </div>
+            <div class="comparison-display" id="comparisonDisplay">
+                <p class="placeholder-text">Select two colours above to compare them side-by-side.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="cart-drawer hidden" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Cart (<span id="drawer-cart-count">0</span> items)</h3>
+            <span class="close-drawer" id="closeCart">&times;</span>
+        </div>
+        <div class="cart-content" id="cartItemsContainer">
+             <p id="cart-placeholder">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal-row">
+                <p class="subtotal-label">Subtotal:</p>
+                <p class="subtotal-value" id="cart-subtotal">$0.00</p>
+            </div>
+            <button class="checkout-button">Checkout</button>
+        </div>
+    </div>
+    
+    <div class="overlay hidden" id="cartOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
