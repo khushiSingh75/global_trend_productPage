@@ -1,4 +1,6 @@
 🧶 Global Trend Product Page
+Check out the deployed Global Trend product page here:  
+👉 [Live on Vercel](https://global-trend-product-git-21ef4b-khushi-singhs-projects-ff6bd063.vercel.app)
 
 A dynamic, responsive product detail page for the Global TRend, built using vanilla HTML, CSS, and JavaScript. 
 This project showcases modular front-end development with interactive features like color/size selection, cart drawer, and a unique "Compare Colours" modal.
